@@ -1,24 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - print sum of multiples of 3 or 5 below 1024
- * Return: 0
+ * main - Lists all the natural numbers below 1024 (excluded)
+ *        that are multiples of 3 or 5.
+ *
+ * Return: Always 0.
  */
-
 int main(void)
 {
-    int n;
-    int sum;
+	int i, sum = 0;
 
-    sum = 0;
-
-    for (n = 0; n < 1024; n++)
+	for (i = 0; i < 1024; i++)
 	{
-	    if ((n % 3 == 0) || (n % 5 == 0))
-	       {
-		   sum += n;
-		   }
-	       }
+		if ((i % 3) == 0 || (i % 5) == 0)
+			sum += i;
+	}
+
 	printf("%d\n", sum);
 
 	return (0);
